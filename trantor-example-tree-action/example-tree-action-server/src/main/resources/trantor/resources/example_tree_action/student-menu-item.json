@@ -1,0 +1,9 @@
+[
+  {
+    "originalKey": "StudentList",
+    "name": "学生相关",
+    "routingType": "Action",
+    "desc": "学生信息",
+    "routeKey": "example_tree_action_Department_studentList"
+  }
+]

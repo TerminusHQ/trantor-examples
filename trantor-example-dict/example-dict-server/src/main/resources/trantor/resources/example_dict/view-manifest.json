@@ -1,0 +1,26 @@
+[
+  {
+    "key": "List",
+    "name": "学生列表",
+    "type": "List",
+    "forModel": "example_dict_Student",
+    "template": "student-list-view.xml",
+    "isDefault": true
+  },
+  {
+    "key": "List",
+    "name": "科目列表",
+    "type": "List",
+    "forModel": "example_dict_Subject",
+    "template": "subject-list-view.xml",
+    "isDefault": true
+  },
+  {
+    "key": "Form",
+    "name": "课程表单",
+    "type": "Form",
+    "forModel": "example_dict_Subject",
+    "template": "subject-form-view.xml",
+    "isDefault": true
+  }
+]

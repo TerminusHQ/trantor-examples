@@ -1,0 +1,26 @@
+<View title="学生信息">
+    <Table key="table" model="example_menu_item_Student">
+        <Search>
+            <Field name="name" label="姓名"/>
+            <Field name="stuNo" label="学号"/>
+            <Field name="country" label="国家"/>
+        </Search>
+        <RecordActions label="操作">
+            <Action label="详细" action="example_menu_item_Student_toDetail"/>
+            <Action label="编辑" action="example_menu_item_Student_toEdit"/>
+            <Action label="删除" after="Refresh" confirm="确定要删除？" action="example_menu_item_delete"/>
+        </RecordActions>
+
+        <Fields>
+            <Field name="name" label="姓名"/>
+            <Field name="stuNo" label="学号"/>
+            <Field name="email" label="邮箱"/>
+            <Field name="country" label="国家"/>
+        </Fields>
+        <Actions>
+            <Action label="创建" openViewType="Dialog" action="example_menu_item_Student_toEdit"/>
+        </Actions>
+
+    </Table>
+
+</View>

@@ -1,0 +1,9 @@
+<View>
+    <Detail model="example_sql_Student" key="form">
+        <Fields>
+            <Field name="name"/>
+            <Field name="stuNo"/>
+            <Field name="age"/>
+        </Fields>
+    </Detail>
+</View>

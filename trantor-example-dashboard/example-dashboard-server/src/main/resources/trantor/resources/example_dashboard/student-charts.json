@@ -1,0 +1,36 @@
+[
+  {
+    "name":"堆积柱状图",
+    "title":"堆积柱状图",
+    "desc":"堆积柱状图",
+    "key":"dashboard demo StackedHistogram",
+    "actionKey":"example_dashboard_StackedHistogramChartDataAction",
+    "unit":"个",
+    "type":"StackedHistogram",
+    "config": {
+      "query": {
+        "registryType": {
+          "label": "注册类型",
+          "type": "MultiDictionary",
+          "queryActionkey": "user_center_RegistryType"
+        }
+      }
+    }
+  },
+  {
+    "name": "柱状图示例",
+    "title": "柱状图示例",
+    "desc": "dashboard demo Histogram",
+    "key": "dashboard_demo_histogram",
+    "actionKey": "example_dashboard_HistogramDemoChartDataAction",
+    "type": "Histogram"
+  },
+  {
+    "name": "折线图示例",
+    "title": "折线图示例",
+    "desc": "dashboard demo LineChart",
+    "key": "dashboard_demo_lineChart",
+    "actionKey": "example_dashboard_LineChartDemoChartDataAction",
+    "type": "LineChart"
+  }
+]

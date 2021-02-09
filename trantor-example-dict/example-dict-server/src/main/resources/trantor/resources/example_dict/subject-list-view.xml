@@ -1,0 +1,25 @@
+<View title="课程列表">
+    <Table key="table" model="example_dict_Subject">
+        <Search>
+            <Fields>
+                <Field name="name"/>
+            </Fields>
+        </Search>
+
+        <RecordActions label="操作">
+            <Action label="详细" openViewType="Dialog" action="example_dict_Subject_toDetail"/>
+            <Action label="删除" after="Refresh" confirm="确定要删除？" action="example_dict_Subject_delete"/>
+        </RecordActions>
+
+
+        <Fields>
+            <Field name="name"/>
+        </Fields>
+
+        <Actions>
+            <Action type="Create" label="创建" openViewType="Dialog" action="example_dict_Subject_toCreate"/>
+        </Actions>
+
+    </Table>
+
+</View>

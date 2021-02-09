@@ -1,0 +1,10 @@
+[
+  {
+    "key": "List",
+    "name": "学生列表",
+    "type": "List",
+    "forModel": "example_i18n_Student",
+    "template": "student-list-view.xml",
+    "isDefault": true
+  }
+]

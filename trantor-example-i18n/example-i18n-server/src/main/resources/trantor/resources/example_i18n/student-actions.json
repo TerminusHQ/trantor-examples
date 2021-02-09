@@ -1,0 +1,13 @@
+[
+  {
+    "forModel": "example_i18n_Student",
+    "key": "studentList",
+    "name": "学生列表",
+    "type": "View",
+    "extra": {
+      "dataSource": "DataStore",
+      "openViewType": "Self",
+      "target": "example_i18n_Student_List"
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "key": "List",
+    "name": "学生列表",
+    "type": "List",
+    "forModel": "example_business_dimension_Student",
+    "template": "student/student-list-view.xml",
+    "isDefault": true
+  },
+  {
+    "key": "toEdit",
+    "name": "编辑学生",
+    "type": "Form",
+    "forModel": "example_business_dimension_Student",
+    "template": "student/student-form-view.xml",
+    "isDefault": true
+  },
+  {
+    "key": "List",
+    "name": "班级列表",
+    "type": "List",
+    "forModel": "example_business_dimension_Classes",
+    "template": "classes/classes-list-view.xml",
+    "isDefault": true
+  }
+]

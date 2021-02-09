@@ -1,0 +1,9 @@
+product:                                          # 当前模块所属项目的信息
+  key: trantor                                    # 当前模块所属项目的唯一标识符
+  version: 0.0.0-SNAPSHOT                         # 当前模块所属制品项目或定制项目的版本(定制项目版本固定为0.0.0-SNAPSHOT)。
+module:                                           # 当前模块信息
+  key: example_menu_item                          # 当前模块的唯一标识符
+  name: 菜单项                                     # 当前模块的名称
+  packageName: io.terminus.trantor.example        # 当前模块的包路径
+  version: 0.0.0-SNAPSHOT                         # 当前模块的版本
+  description: 菜单项                              # 当前模块的描述信息

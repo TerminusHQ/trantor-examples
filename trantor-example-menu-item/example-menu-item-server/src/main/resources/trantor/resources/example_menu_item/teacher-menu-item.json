@@ -1,0 +1,10 @@
+[
+  {
+    "originalKey": "TeacherList",
+    "name": "老师相关",
+    "routingType": "Action",
+    "desc": "老师信息",
+    "routeKey": "example_menu_item_Teacher_listAll"
+  }
+
+]

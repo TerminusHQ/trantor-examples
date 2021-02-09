@@ -1,0 +1,15 @@
+<View>
+    <Form model="example_tree_action_Department" key="form">
+        <Fields>
+            <Field name="name" />
+            <Field name="code" />
+            <Field name="parent" />
+
+        </Fields>
+        <Actions>
+
+            <Action type="Submit" :show="!this.data.id" action="example_tree_action_Department_create"
+                    after="Refresh"/>
+        </Actions>
+    </Form>
+</View>

@@ -1,0 +1,16 @@
+[
+  {
+    "originalKey": "StudentList",
+    "name": "学生列表",
+    "routingType": "Action",
+    "desc": "学生列表",
+    "routeKey": "example_business_dimension_Student_studentList"
+  },
+  {
+    "originalKey": "ClassesList",
+    "name": "班级列表",
+    "routingType": "Action",
+    "desc": "班级列表",
+    "routeKey": "example_business_dimension_Classes_gradeList"
+  }
+]

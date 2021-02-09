@@ -1,0 +1,15 @@
+<View>
+    <Form model="example_dict_Subject">
+        <Fields>
+            <Field name="type"/>
+            <Field name="name">
+                <RenderType>
+                    <Select :allowGroups="(!this.data.type || this.data.type==='all')? ['arts', 'science']: this.data.type==='arts' ? ['arts']:['science']"/>
+                </RenderType>
+            </Field>
+        </Fields>
+        <Actions>
+            <Action type="Submit" after="GoBack" action="example_dict_Subject_create"/>
+        </Actions>
+    </Form>
+</View>

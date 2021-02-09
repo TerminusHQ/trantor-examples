@@ -1,0 +1,61 @@
+[
+  {
+    "forModel": "example_action_Student",
+    "key": "studentList",
+    "name": "学生列表",
+    "type": "View",
+    "extra": {
+      "dataSource": "Action",
+      "openViewType": "Self",
+      "actionKey": "example_action_Student_StudentMultiDataAction",
+      "target": "example_action_Student_toList"
+    }
+  },
+  {
+    "forModel": "example_action_Student",
+    "key": "toCreate",
+    "name": "创建",
+    "type": "View",
+    "extra": {
+      "dataSource": "Empty",
+      "openViewType": "Dialog",
+      "target": "example_action_Student_toEdit"
+    }
+  },
+  {
+    "forModel": "example_action_Student",
+    "key": "toEdit",
+    "name": "修改",
+    "type": "View",
+    "extra": {
+      "dataSource": "DataStore",
+      "openViewType": "Dialog",
+      "target": "example_action_Student_toEdit"
+    }
+  },
+  {
+    "forModel": "example_action_Student",
+    "key": "toDetail",
+    "name": "学生详情",
+    "type": "View",
+    "extra": {
+      "dataSource": "Action",
+      "openViewType": "Dialog",
+      "actionKey": "example_action_Student_StudentSingleDataAction",
+      "target": "example_action_Student_toDetail"
+    }
+  },
+  {
+    "forModel": "example_action_Student",
+    "key": "studentDataStoreList",
+    "name": "学生列表",
+    "type": "View",
+    "extra": {
+      "dataSource": "DataStore",
+      "condition":  "status != Frozen" ,
+      "openViewType": "Self",
+      "target": "example_action_Student_studentDataStoreList"
+    }
+  }
+
+]

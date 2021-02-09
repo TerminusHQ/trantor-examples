@@ -1,0 +1,13 @@
+[
+  {
+    "forModel": "example_menu_item_Student",
+    "key": "studentList",
+    "name": "学生列表",
+    "type": "View",
+    "extra": {
+      "dataSource": "DataStore",
+      "openViewType": "Self",
+      "target": "example_menu_item_Student_List"
+    }
+  }
+]

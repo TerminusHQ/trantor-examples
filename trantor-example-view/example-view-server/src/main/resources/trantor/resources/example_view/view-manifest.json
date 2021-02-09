@@ -1,0 +1,35 @@
+[
+  {
+    "key": "toList",
+    "name": "学生列表",
+    "type": "List",
+    "forModel": "example_view_Student",
+    "template": "student/student-list-view.xml",
+    "isDefault": true
+  },
+  {
+    "key": "toEdit",
+    "name": "编辑学生",
+    "type": "Form",
+    "forModel": "example_view_Student",
+    "template": "student/student-form-view.xml",
+    "controller": "student/student-form-view.ts",
+    "isDefault": true
+  },
+  {
+    "key": "toDetail",
+    "name": "学生详情",
+    "type": "Detail",
+    "forModel": "example_view_Student",
+    "template": "student/student-detail-view.xml",
+    "isDefault": true
+  },
+  {
+    "key": "studentDataStoreList",
+    "name": "学生列表",
+    "type": "List",
+    "forModel": "example_view_Student",
+    "template": "student/student-list-view.xml",
+    "isDefault": false
+  }
+]

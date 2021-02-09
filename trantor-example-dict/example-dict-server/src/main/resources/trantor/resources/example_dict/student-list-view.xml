@@ -1,0 +1,28 @@
+<View title="学生信息">
+    <Table key="table" model="example_dict_Student">
+        <Search>
+            <Fields>
+                <Field name="name"/>
+                <Field name="sex"/>
+            </Fields>
+        </Search>
+
+        <RecordActions label="操作">
+            <Action label="详细" openViewType="Dialog" action="example_dict_Student_toDetail"/>
+            <Action label="编辑" openViewType="Blank" action="example_dict_Student_toEdit"/>
+            <Action label="删除" after="Refresh" confirm="确定要删除？" action="example_dict_Student_delete"/>
+        </RecordActions>
+
+
+        <Fields>
+            <Field name="name"/>
+            <Field name="sex"/>
+        </Fields>
+
+        <Actions>
+            <Action label="创建" openViewType="Dialog" action="example_dict_Student_toEdit"/>
+        </Actions>
+
+    </Table>
+
+</View>

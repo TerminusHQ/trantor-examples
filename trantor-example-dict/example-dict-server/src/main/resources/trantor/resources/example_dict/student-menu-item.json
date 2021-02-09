@@ -1,0 +1,16 @@
+[
+  {
+    "originalKey": "StudentList",
+    "name": "学生相关",
+    "routingType": "Action",
+    "desc": "学生信息",
+    "routeKey": "example_dict_Student_studentList"
+  },
+  {
+    "originalKey": "SubjectList",
+    "name": "课程相关",
+    "routingType": "Action",
+    "desc": "课程信息",
+    "routeKey": "example_dict_Subject_subjectList"
+  }
+]

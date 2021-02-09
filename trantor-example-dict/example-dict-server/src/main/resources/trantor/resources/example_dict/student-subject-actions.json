@@ -1,0 +1,35 @@
+[
+  {
+    "forModel": "example_dict_Student",
+    "key": "studentList",
+    "name": "学生列表",
+    "type": "View",
+    "extra": {
+      "dataSource": "DataStore",
+      "openViewType": "Self",
+      "target": "example_dict_Student_List"
+    }
+  },
+  {
+    "forModel": "example_dict_Subject",
+    "key": "subjectList",
+    "name": "学生列表",
+    "type": "View",
+    "extra": {
+      "dataSource": "DataStore",
+      "openViewType": "Self",
+      "target": "example_dict_Subject_List"
+    }
+  },
+  {
+    "forModel": "example_dict_Subject",
+    "key": "toCreate",
+    "name": "新增课程",
+    "type": "View",
+    "extra": {
+      "dataSource": "Static",
+      "openViewType": "self",
+      "targetType": "Form"
+    }
+  }
+]

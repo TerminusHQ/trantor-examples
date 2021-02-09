@@ -1,0 +1,10 @@
+[
+  {
+    "key": "List",
+    "name": "Tree列表",
+    "type": "List",
+    "forModel": "example_tree_action_Department",
+    "template": "dapartment-list-view.xml",
+    "isDefault": true
+  }
+]

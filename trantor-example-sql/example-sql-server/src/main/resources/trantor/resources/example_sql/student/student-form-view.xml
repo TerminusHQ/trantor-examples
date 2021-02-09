@@ -1,0 +1,16 @@
+<View>
+    <Form model="example_sql_Student" key="form">
+        <Fields>
+            <Field name="name"/>
+            <Field name="stuNo"/>
+            <Field name="age"/>
+            <Field name="studentCard"/>
+        </Fields>
+        <Actions>
+            <Action type="Submit" :show="!this.data.id" action="example_sql_Student_StudentServerAction::create"
+                    after="GoBack"/>
+            <Action type="Submit" :show="!!this.data.id" action="example_sql_Student_StudentServerAction::update"
+                    after="GoBack"/>
+        </Actions>
+    </Form>
+</View>

@@ -1,0 +1,13 @@
+[
+  {
+    "forModel": "example_tree_action_Department",
+    "key": "studentList",
+    "name": "Tree列表",
+    "type": "View",
+    "extra": {
+      "dataSource": "DataStore",
+      "openViewType": "Self",
+      "target": "example_tree_action_Department_List"
+    }
+  }
+]

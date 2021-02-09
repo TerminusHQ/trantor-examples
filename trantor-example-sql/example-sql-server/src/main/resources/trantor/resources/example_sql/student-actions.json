@@ -1,0 +1,14 @@
+[
+  {
+    "forModel": "example_sql_Student",
+    "key": "studentList",
+    "name": "学生列表",
+    "type": "View",
+    "extra": {
+      "dataSource": "Action",
+      "openViewType": "Self",
+      "target": "example_sql_Student_List",
+      "actionKey": "example_sql_Student_StudentMultiDataAction"
+    }
+  }
+]

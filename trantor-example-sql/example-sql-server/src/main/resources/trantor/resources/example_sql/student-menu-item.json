@@ -1,0 +1,16 @@
+[
+  {
+    "originalKey": "studentList",
+    "name": "学生列表",
+    "routingType": "Action",
+    "desc": "学生列表",
+    "routeKey": "example_sql_Student_studentList"
+  },
+  {
+    "originalKey": "studentCardList",
+    "name": "学生卡列表",
+    "routingType": "Action",
+    "desc": "学生卡列表",
+    "routeKey": "example_sql_StudentCard_listAll"
+  }
+]

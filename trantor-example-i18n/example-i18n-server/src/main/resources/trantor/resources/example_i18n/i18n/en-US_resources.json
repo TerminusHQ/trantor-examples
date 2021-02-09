@@ -1,0 +1,24 @@
+{
+  "models": {
+    "example_i18n_Student": {
+      "name": "Student",
+      "fields": {
+        "id": "ID",
+        "gender": "gender"
+      }
+    }
+  },
+  "enums": {
+    "io.terminus.trantor.example.enums.Gender": {
+      "MALE": "male",
+      "FEMALE": "female",
+      "UN_KNOW": "un_know"
+    }
+  },
+  "dictionaries": {
+    "ScoreEnum": {
+      "Excellent": "Excellent",
+      "Good": "Good"
+    }
+  }
+}

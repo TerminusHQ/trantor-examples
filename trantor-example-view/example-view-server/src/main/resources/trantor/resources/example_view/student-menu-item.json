@@ -1,0 +1,30 @@
+[
+  {
+    "originalKey": "StudentList",
+    "name": "学生列表",
+    "routingType": "Action",
+    "desc": "学生列表",
+    "routeKey": "example_view_Student_listAll"
+  },
+  {
+    "originalKey": "customList",
+    "name": "学生列表(custom)",
+    "routingType": "Action",
+    "desc": "学生列表",
+    "routeKey": "example_view_Student_customList"
+  },
+  {
+    "originalKey": "toEdit",
+    "name": "学生编辑",
+    "routingType": "Action",
+    "desc": "学生编辑",
+    "routeKey": "example_view_Student_toEdit"
+  },
+  {
+    "originalKey": "toDetail",
+    "name": "学生详情",
+    "routingType": "Action",
+    "desc": "学生详情",
+    "routeKey": "example_view_Student_toDetail"
+  }
+]

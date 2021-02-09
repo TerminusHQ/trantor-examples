@@ -1,0 +1,36 @@
+[
+  {
+    "forModel": "example_business_dimension_Student",
+    "key": "toEdit",
+    "name": "创建",
+    "type": "View",
+    "extra": {
+      "dataSource": "Empty",
+      "openViewType": "Dialog",
+      "target": "example_business_dimension_Student_toEdit"
+    }
+  },
+  {
+    "forModel": "example_business_dimension_Student",
+    "key": "studentList",
+    "name": "学生列表",
+    "type": "View",
+    "extra": {
+      "dataSource": "Action",
+      "openViewType": "Self",
+      "target": "example_business_dimension_Student_List",
+      "actionKey": "example_business_dimension_Student_StudentDataAction"
+    }
+  },
+  {
+    "forModel": "example_business_dimension_Classes",
+    "key": "gradeList",
+    "name": "班级列表",
+    "type": "View",
+    "extra": {
+      "dataSource": "DataStore",
+      "openViewType": "Self",
+      "target": "example_business_dimension_Classes_List"
+    }
+  }
+]

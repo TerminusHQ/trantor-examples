@@ -1,0 +1,14 @@
+<View>
+    <Form model="example_business_dimension_Student" key="form">
+        <Fields>
+            <Field name="name" label="姓名"/>
+            <Field name="stuNo" label="学号"/>
+            <Field name="email" label="邮箱"/>
+            <Field name="country" label="国家"/>
+        </Fields>
+        <Actions>
+            <Action type="Submit" :show="!this.data.id" action="example_business_dimension_Student_StudentServerAction::save"
+                    after="GoBack"/>
+        </Actions>
+    </Form>
+</View>

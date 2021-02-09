@@ -1,0 +1,14 @@
+<View title="部门列表">
+
+        <CascadeList model="example_tree_action_Department"
+                     depthLimit="4" parentField="parent"
+                     dataSourceAction="example_tree_action_Department_ExampleTreeAction" onAdd="example_tree_action_Department_toEdit"  >
+            <Fields>
+                <Field name="name"/>
+            </Fields>
+            <RecordActions>
+                <Action label="删除" action="example_tree_action_Department_delete" after="Refresh" />
+            </RecordActions>
+        </CascadeList>
+
+</View>

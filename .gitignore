@@ -29,5 +29,4 @@ atlassian-ide-plugin.xml
 application.properties
 */src/**/application-dev.yml
 docs
-pom.xml
  No newline at end of file

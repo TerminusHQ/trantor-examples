@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.terminus.trantor</groupId>
+        <artifactId>trantor</artifactId>
+        <version>0.14.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>io.terminus.trantor.examples</groupId>
+    <artifactId>trantor-examples</artifactId>
+    <packaging>pom</packaging>
+    <version>0.14.0-SNAPSHOT</version>
+    <modules>
+        <module>trantor-example-module</module>
+        <module>trantor-example-model</module>
+        <module>trantor-example-view</module>
+        <module>trantor-example-action</module>
+        <module>trantor-example-dao</module>
+        <module>trantor-example-menu-item</module>
+        <module>trantor-example-i18n</module>
+        <module>trantor-example-tree-action</module>
+        <module>trantor-example-dashboard</module>
+        <module>trantor-example-business-dimension</module>
+        <module>trantor-example-dict</module>
+        <module>trantor-example-sql</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <terminus.trantor.version>0.14.0-SNAPSHOT</terminus.trantor.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.terminus.trantor</groupId>
+                <artifactId>api</artifactId>
+                <version>${terminus.trantor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.terminus.trantor</groupId>
+                <artifactId>framework</artifactId>
+                <version>${terminus.trantor.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.zaxxer</groupId>
+                        <artifactId>HikariCP-java6</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>io.terminus.trantor</groupId>
+                    <artifactId>trantor-metadata-maven-plugin</artifactId>
+                    <version>${terminus.trantor.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

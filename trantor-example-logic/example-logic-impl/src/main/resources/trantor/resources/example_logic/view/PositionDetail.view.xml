@@ -1,0 +1,13 @@
+<View title="" forModel="example_logic_Position" type="Detail" version="2"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/xsi/0.17/base.xsd">
+    <Detail model="example_logic_Position" dataCondition="id = ?" dataParams="[pageContext.record.id]">
+        <Fields>
+            <Field name="code"/>
+            <Field name="name"/>
+            <Field name="type"/>
+            <Field name="remark"/>
+            <Field name="status"/>
+        </Fields>
+    </Detail>
+</View>

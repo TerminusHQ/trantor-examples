@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>trantor-parent</artifactId>
+        <groupId>io.terminus.trantor</groupId>
+        <version>0.17.63.RELEASE</version>
+    </parent>
+
+    <groupId>io.terminus.trantor.examples</groupId>
+    <artifactId>trantor-examples</artifactId>
+    <packaging>pom</packaging>
+    <version>0.17.63.RELEASE</version>
+    <modules>
+        <module>trantor-example-namespace</module>
+        <module>trantor-example-model</module>
+        <module>trantor-example-ds</module>
+        <module>trantor-example-view</module>
+        <module>trantor-example-dict</module>
+        <module>trantor-example-logic</module>
+        <module>trantor-example-restapi</module>
+        <module>trantor-example-business-context</module>
+        <module>trantor-example-trigger</module>
+        <module>trantor-example-cache</module>
+        <module>trantor-example-dynamic-view</module>
+        <module>trantor-example-import-export</module>
+        <module>trantor-example-job</module>
+        <module>trantor-example-tree-datasource</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <trantor.version>${project.version}</trantor.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- trantor-api -->
+            <dependency>
+                <groupId>io.terminus.trantor</groupId>
+                <artifactId>trantor-api</artifactId>
+                <version>${trantor.version}</version>
+            </dependency>
+            <!-- trantor-sdk -->
+            <dependency>
+                <groupId>io.terminus.trantor</groupId>
+                <artifactId>trantor-sdk</artifactId>
+                <version>${trantor.version}</version>
+            </dependency>
+            <!-- trantor-runtime -->
+            <dependency>
+                <groupId>io.terminus.trantor</groupId>
+                <artifactId>trantor-runtime</artifactId>
+                <version>${trantor.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>io.terminus.trantor</groupId>
+                    <artifactId>metadata-maven-plugin</artifactId>
+                    <version>${trantor.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

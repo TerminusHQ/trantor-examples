@@ -1,0 +1,9 @@
+<View title="品牌" forModel="trantor_example_cache_BrandBO" type="Detail" version="2">
+    <Detail model="trantor_example_cache_BrandBO"
+            dataFunction="trantor_example_cache_QueryItemBrandFunc"
+            dataParams="{id: pageContext.record.id}">
+        <Fields>
+            <Field name="brandName"/>
+        </Fields>
+    </Detail>
+</View>

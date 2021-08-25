@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View title="订单列表" name="订单列表" forModel="example_import_export_OrderBO" type="List" menuView="true" isDefault="true" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Table key="table" model="example_import_export_OrderBO"  dataCondition="">
+        <Search >
+            <Fields>
+                <Field name="code"/>
+                <Field name="title"/>
+            </Fields>
+        </Search>
+        <Fields>
+            <Field name="code"/>
+            <Field name="title"/>
+            <Field name="buyer"/>
+            <Field name="paidAmount">
+                <RenderType>
+                    <InputNumber :min="0"></InputNumber>
+                </RenderType>
+            </Field>
+            <Field name="payStatus"/>
+        </Fields>
+    </Table>
+</View>

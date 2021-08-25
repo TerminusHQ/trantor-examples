@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View title="课程信息" forModel="example_dict_Subject" type="Form" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Form model="example_dict_Subject" dataCondition="id = ?" dataParams="[pageContext.record.id]">
+        <Fields>
+            <Field name="type"/>
+            <Field name="name">
+                <RenderType>
+                    <!--表单视图单字典为单选，取值结果为字符串-->
+                    <Select allowGroups="#{(!this.data.type || this.data.type === 'all') ? ['arts', 'science'] : this.data.type === 'arts' ? ['arts'] : ['science']}"/>
+                </RenderType>
+            </Field>
+        </Fields>
+        <Actions>
+            <Action type="Submit" show="#{!this.data.id}" logicFunction="example_dict_CreateSubjectBuiltInFunc" after="GoBack" layout="Footer"/>
+            <Action type="Submit" show="#{!!this.data.id}" logicFunction="example_dict_UpdateSubjectBuiltInFunc" after="GoBack" layout="Footer"/>
+        </Actions>
+    </Form>
+</View>

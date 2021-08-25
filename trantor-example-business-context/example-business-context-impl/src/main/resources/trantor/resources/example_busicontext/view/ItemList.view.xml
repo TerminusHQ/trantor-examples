@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View type="List" forModel="example_busicontext_ItemBO" title="商品列表"  version="2" menuView="true" name="商品列表"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.17.x/schema/base.xsd">
+
+
+    <!-- 这里为了演示方便，使用 TestContext 自定义的数据作为table的过滤条件
+          测试的时候可以新增两个商品， 一个名称随意，另一个名称与业务上下文里的一致
+          期望的结果是过滤生效，只有一条记录
+    -->
+    <Table model="example_busicontext_ItemBO" dataCondition="itemName = ?"
+                    dataParams="[@context.example_busicontext_TestContext.getItem.itemName]">
+        <Search>
+            <Fields>
+                <Field name="itemName"/>
+                <Field name="desc"/>
+            </Fields>
+        </Search>
+        <Fields>
+            <Field name="itemName"/>
+            <Field name="desc"/>
+        </Fields>
+        <RecordActions>
+            <Action label="详情" targetView="example_busicontext_ItemBO__Detail__builtIn"/>
+            <Action label="编辑" targetView="example_busicontext_ItemBO__Form__builtIn"/>
+            <Action label="删除" logicFunction="example_busicontext_DeleteItemBOBuiltInFunc" after="Refresh"/>
+        </RecordActions>
+        <Actions>
+            <Action type="Create" targetView="example_busicontext_ItemBO__Form__builtIn"/>
+        </Actions>
+    </Table>
+
+</View>

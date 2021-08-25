@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View type="Form" forModel="item_MyUser" title="用户编辑" version="2"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.17.x/schema/base.xsd">
+
+    <Form key="user" model="item_MyUser" dataCondition="id = ?" dataParams="[3]">
+        <Fields>
+            <Field name="name"/>
+            <Field name="age"/>
+        </Fields>
+        <Actions>
+            <Action type="Submit" label="提交" after="Refresh" layout="Footer" logicFunction="item_DynamicSubmitFunc"/>
+        </Actions>
+    </Form>
+    <DynamicView logicFunc="item_DynamicViewFunc"
+                 dynamicLookupFrom="user"
+                 dataParams="{id: pageRecord.id}"/>
+</View>

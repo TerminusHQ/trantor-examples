@@ -1,0 +1,3 @@
+
+trantor:
+  mainModule: example_namespace  # 当前模块key

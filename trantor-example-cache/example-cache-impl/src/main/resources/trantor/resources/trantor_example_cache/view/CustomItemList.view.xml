@@ -1,0 +1,30 @@
+<View title="商品" forModel="trantor_example_cache_ItemBO" type="List" menuView="true" version="2">
+    <Table key="table" model="trantor_example_cache_ItemBO"  dataCondition="">
+        <Search>
+            <Fields>
+                <Field name="itemName"/>
+                <Field name="itemNumber"/>
+                <Field name="itemDesc"/>
+                <Field name="itemPrice"/>
+                <Field name="brand"/>
+            </Fields>
+        </Search>
+        <RecordActions label="操作">
+            <Action label="编辑" targetView="trantor_example_cache_ItemBO__Form__builtIn"/>
+            <Action label="查询品牌详情" targetView="trantor_example_cache_BrandBO_CustomBrandDetail"/>
+            <Action label="失效品牌缓存" logicFunction="trantor_example_cache_InvalidateItemBrandFunc" after="Refresh"/>
+            <Action label="解除品牌关联" logicFunction="trantor_example_cache_DeleteItemBrandRelationFunc" after="Refresh"/>
+        </RecordActions>
+        <Fields>
+            <Field name="itemName"/>
+            <Field name="itemNumber"/>
+            <Field name="itemDesc"/>
+            <Field name="itemImage"/>
+            <Field name="itemPrice"/>
+            <Field name="brand"/>
+        </Fields>
+        <Actions>
+            <Action layout="Header" type="Create" targetView="trantor_example_cache_ItemBO__Form__builtIn"/>
+        </Actions>
+    </Table>
+</View>

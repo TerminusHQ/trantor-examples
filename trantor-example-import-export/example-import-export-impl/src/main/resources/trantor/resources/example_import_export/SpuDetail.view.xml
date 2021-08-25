@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View title="商品" name="商品特性详情" forModel="example_import_export_SpuBO" type="Detail" isDefault="true" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Detail key="main" model="example_import_export_SpuBO" dataCondition="id = ?" dataParams="[pageContext.record.id]">
+        <Fields>
+            <Field name="spuCode"/>
+            <Field name="name"/>
+            <Field name="unit"/>
+            <Field name="category"/>
+            <Field name="brandName"/>
+            <Field name="itemTypeDict"/>
+            <Field name="mainImage"/>
+            <Field name="mainImageAttachment"/>
+        </Fields>
+    </Detail>
+</View>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View title="编辑商品" name="商品表单" forModel="example_import_export_ItemBO" type="Form" isDefault="true" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Form key="main" model="example_import_export_ItemBO" dataCondition="id = ?" dataParams="[pageContext.record.id]">
+        <Fields>
+            <Field name="itemCode"/>
+            <Field name="itemName"/>
+            <Field name="itemType"/>
+            <Field name="spu"/>
+            <Field name="category"/>
+            <Field name="itemWeight"/>
+        </Fields>
+        <Actions>
+            <Action type="Submit" label="提交" after="GoBack" layout="Footer" show="#{this.data.id == null}" logicFlow="example_import_export_ItemCreateFun"/>
+            <Action type="Submit" label="保存" after="GoBack" layout="Footer" show="#{this.data.id != null}" logicFlow="example_import_export_ItemUpdateFlow"/>
+        </Actions>
+    </Form>
+
+    <TableForm key="spuList" lookupFrom="main.spuList" model="example_import_export_SpuBO">
+        <Fields>
+            <Field name="spuCode"/>
+            <Field name="name"/>
+            <Field name="brandName"/>
+        </Fields>
+    </TableForm>
+
+
+    <TableForm key="supplierList" lookupFrom="main.supplierList" model="example_import_export_SupplierBO">
+        <Fields>
+            <Field name="code"/>
+            <Field name="name"/>
+            <Field name="mobile"/>
+        </Fields>
+    </TableForm>
+</View>

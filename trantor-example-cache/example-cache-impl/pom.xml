@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>trantor-example-cache</artifactId>
+        <groupId>io.terminus.trantor.examples</groupId>
+        <version>0.17.63.RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>example-cache-impl</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.terminus.trantor.examples</groupId>
+            <artifactId>example-cache-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.terminus.trantor</groupId>
+            <artifactId>trantor-sdk</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.terminus.trantor</groupId>
+                <artifactId>metadata-maven-plugin</artifactId>
+                <version>${trantor.version}</version>
+                <configuration>
+                    <moduleKey>trantor_example_cache</moduleKey>
+                    <repositoryUrl>http://trantor.terminus.io:8082/terminus/trantor</repositoryUrl>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

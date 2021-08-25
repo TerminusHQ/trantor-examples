@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View menuView="true" type="List" forModel="example_dict_Student" title="学生列表" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Table key="table" model="example_dict_Student" dataCondition="">
+        <Search>
+            <Fields>
+                <Field name="name"/>
+                <Field name="sex"/>
+                <Field name="subjects"/>
+            </Fields>
+        </Search>
+        <RecordActions label="操作">
+            <Action label="详细" openViewType="Dialog" targetView="example_dict_Student_studentDetail"/>
+            <Action label="编辑" openViewType="Blank" targetView="example_dict_Student_studentEdit"/>
+            <Action label="删除" after="Refresh" confirm="确定要删除？" logicFunction="example_dict_DeleteStudentBuiltInFunc"/>
+        </RecordActions>
+        <Fields>
+            <Field name="name"/>
+            <Field name="sex"/>
+            <Field name="subjects"/>
+        </Fields>
+        <Actions>
+            <Action label="创建" openViewType="Dialog" targetView="example_dict_Student_studentEdit"/>
+        </Actions>
+    </Table>
+</View>

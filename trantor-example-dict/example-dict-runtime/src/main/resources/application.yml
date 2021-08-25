@@ -1,0 +1,4 @@
+trantor:
+  mainModule: example_dict
+server:
+  port: 9000

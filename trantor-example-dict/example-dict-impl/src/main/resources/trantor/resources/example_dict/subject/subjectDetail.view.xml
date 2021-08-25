@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View title="课程信息" forModel="example_dict_Subject" type="Detail" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Detail model="example_dict_Subject" dataCondition="id = ?" dataParams="[pageContext.record.id]">
+        <Fields>
+            <Field name="name"/>
+        </Fields>
+    </Detail>
+</View>

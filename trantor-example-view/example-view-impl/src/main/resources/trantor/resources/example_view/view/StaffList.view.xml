@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View menuView="true" title="人员信息列表" type="List" forModel="example_view_Staff" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Table model="example_view_Staff" dataCondition="">
+        <Actions>
+            <Action label="新建人员信息" targetView="example_view_Staff_StaffCreate"/>
+        </Actions>
+        <Search>
+            <Fields>
+                <Field name="staffName" label="员工名称"/>
+                <Field name="staffMobile" label="员工手机号"/>
+                <Field name="StaffEmail" label="员工邮箱"/>
+            </Fields>
+        </Search>
+        <Fields>
+            <Field name="staffNumber" label="员工编号"/>
+            <Field name="staffName" label="员工名称"/>
+            <Field name="staffMobile" label="员工手机号"/>
+            <Field name="StaffEmail" label="员工邮箱"/>
+            <Field name="staffDesc" label="个人介绍"/>
+        </Fields>
+        <RecordActions label="操作">
+            <Action label="详情" targetView="example_view_Staff_StaffDetail"/>
+            <Action label="编辑" targetView="example_view_Staff_StaffEdit"/>
+            <Action type="Delete" label="删除" after="Refresh" logicFunction="example_view_DeleteStaffFunc"/>
+        </RecordActions>
+    </Table>
+</View>

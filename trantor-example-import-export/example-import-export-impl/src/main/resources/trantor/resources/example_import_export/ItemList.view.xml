@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View title="商品列表" name="商品列表" forModel="example_import_export_ItemBO" type="List" menuView="true" isDefault="true" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Table key="table" model="example_import_export_ItemBO"  dataCondition="">
+        <Search >
+            <Fields>
+                <Field name="itemCode"/>
+                <Field name="itemName"/>
+            </Fields>
+        </Search>
+        <Fields>
+            <Field name="itemCode"/>
+            <Field name="itemName"/>
+            <Field name="itemType"/>
+            <Field name="spu"/>
+            <Field name="category"/>
+            <Field name="itemWeight"/>
+            <Field name="createdAt"/>
+            <Field name="spu.name"/>
+        </Fields>
+        <RecordActions label="操作">
+            <Action label="详情" targetView="example_import_export_ItemBO_ItemDetail"/>
+            <Action label="编辑" targetView="example_import_export_ItemBO_ItemForm"/>
+            <Action label="删除" logicFunction="example_import_export_ItemDeleteFunc" confirm="确定要删除吗?" after="Refresh"/>
+        </RecordActions>
+        <Actions>
+            <Action type="Create" targetView="example_import_export_ItemBO_ItemForm"/>
+        </Actions>
+    </Table>
+</View>

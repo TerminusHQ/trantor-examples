@@ -1,0 +1,30 @@
+<View title="Search Item" forModel="example_model_ItemBO" type="List" menuView="true" version="2">
+    <Table key="table" model="example_model_ItemBO"  dataCondition="">
+        <Search model="example_model_ItemAggregationSO">
+            <Fields>
+                <Field name="itemName"/>
+                <Field name="brandName"/>
+                <Field name="categoryName"/>
+                <Field name="createdAt"/>
+            </Fields>
+        </Search>
+        <RecordActions label="操作">
+            <Action label="详情" targetView="example_model_ItemBO__Detail__builtIn"/>
+            <Action label="编辑" targetView="example_model_ItemBO__Form__builtIn"/>
+            <Action label="删除" logicFunction="example_model_DeleteItemBOBuiltInFunc" after="Refresh"/>
+        </RecordActions>
+        <Fields>
+            <Field name="itemCode"/>
+            <Field name="itemName"/>
+            <Field name="itemType"/>
+            <Field name="itemDesc"/>
+            <Field name="itemImage"/>
+            <Field name="itemPrice"/>
+            <Field name="categoryBO"/>
+        </Fields>
+        <Actions>
+            <Action type="Create" targetView="example_model_ItemBO__Form__builtIn"/>
+        </Actions>
+    </Table>
+</View>
+

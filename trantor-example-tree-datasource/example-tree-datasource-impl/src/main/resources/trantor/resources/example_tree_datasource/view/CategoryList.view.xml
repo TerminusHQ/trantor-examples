@@ -1,0 +1,22 @@
+<View xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/xsi/0.17.x/base.xsd"
+      title="" forModel="example_tree_datasource_Category" type="List" menuView="true" version="2">
+    <Table model="example_tree_datasource_Category" menuView="true" dataCondition="">
+        <Search>
+            <Fields>
+                <Field name="name"/>
+            </Fields>
+        </Search>
+        <RecordActions>
+            <Action label="详情" targetView="example_tree_datasource_Category__Detail__builtIn"/>
+            <Action label="编辑" targetView="example_tree_datasource_Category__Form__builtIn"/>
+            <Action label="删除" logicFunction="example_tree_datasource_DeleteCategoryBuiltInFunc" after="Refresh"/>
+        </RecordActions>
+        <Fields>
+            <Field name="name"/>
+        </Fields>
+        <Actions>
+            <Action type="Create" targetView="example_tree_datasource_Category__Form__builtIn"/>
+        </Actions>
+    </Table>
+</View>

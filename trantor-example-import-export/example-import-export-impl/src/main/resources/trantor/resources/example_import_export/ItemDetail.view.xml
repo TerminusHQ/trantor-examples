@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View title="商品详情" name="商品详情" forModel="example_import_export_ItemBO" type="Detail" isDefault="true" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Detail key="main" model="example_import_export_ItemBO" dataCondition="id = ?" dataParams="[pageContext.record.id]">
+        <Fields>
+            <Field name="itemCode"/>
+            <Field name="itemName"/>
+            <Field name="itemType"/>
+            <Field name="spu.name"/>
+            <Field name="itemWeight"/>
+            <Field name="category.name"/>
+        </Fields>
+    </Detail>
+</View>

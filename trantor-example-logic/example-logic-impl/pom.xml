@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>trantor-example-logic</artifactId>
+        <groupId>io.terminus.trantor.examples</groupId>
+        <version>0.17.63.RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>example-logic-impl</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- trantor-sdk -->
+        <dependency>
+            <groupId>io.terminus.trantor</groupId>
+            <artifactId>trantor-sdk</artifactId>
+        </dependency>
+        <!-- trantor-runtime -->
+        <dependency>
+            <groupId>io.terminus.trantor</groupId>
+            <artifactId>trantor-runtime</artifactId>
+        </dependency>
+        <!-- trantor-example-logic -->
+        <dependency>
+            <groupId>io.terminus.trantor.examples</groupId>
+            <artifactId>example-logic-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.terminus.trantor</groupId>
+                <artifactId>metadata-maven-plugin</artifactId>
+                <version>${trantor.version}</version>
+                <configuration>
+                    <!-- 这里请替换为你自己的模块key & metastore 地址 -->
+                    <moduleKey>example_logic</moduleKey>
+                    <repositoryUrl>http://trantor.terminus.io:8082/terminus/trantor</repositoryUrl>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

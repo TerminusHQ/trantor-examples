@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "name": "定时打日志任务",
+  "logicFlowKey": "example_job_AutoEchoFlow",
+  "config": {
+    "triggerType": "Cron",
+    "expression": "0 * * * * ?",
+    "timeout": 3600
+  }
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>trantor-example-import-export</artifactId>
+        <groupId>io.terminus.trantor.examples</groupId>
+        <version>0.17.63.RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>example-import-export-impl</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.terminus.trantor.examples</groupId>
+            <artifactId>example-import-export-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.terminus.trantor</groupId>
+            <artifactId>trantor-sdk</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.terminus.trantor</groupId>
+            <artifactId>trantor-runtime</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- 上报信息至指定 metastore, 此时会根据 @Model 创建对应 table -->
+            <plugin>
+                <groupId>io.terminus.trantor</groupId>
+                <artifactId>metadata-maven-plugin</artifactId>
+                <version>${trantor.version}</version>
+                <configuration>
+                    <moduleKey>example_import_export</moduleKey>
+                    <repositoryUrl>http://trantor.terminus.io:8082/terminus/trantor</repositoryUrl>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

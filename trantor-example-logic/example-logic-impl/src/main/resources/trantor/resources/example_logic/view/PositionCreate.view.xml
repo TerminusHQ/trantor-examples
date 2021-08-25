@@ -1,0 +1,19 @@
+<View title="" forModel="example_logic_Position" type="Form" version="2"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/xsi/0.17/base.xsd">
+    <Form model="example_logic_Position" dataCondition="id = ?" dataParams="[pageContext.record.id]">
+        <Fields>
+            <Field name="name"/>
+            <Field name="type"/>
+            <Field name="remark"/>
+            <Field name="status"/>
+        </Fields>
+        <Actions>
+            <Action type="Submit" show="#{!this.data.id}" logicFlow="example_logic_CreatePositionFlow"
+                    after="GoBack" layout="Footer"/>
+            <!--采用的内建逻辑进行删除-->
+            <Action type="Submit" show="#{!!this.data.id}" logicFunction="example_logic_UpdatePositionBuiltInFunc"
+                    after="GoBack" layout="Footer"/>
+        </Actions>
+    </Form>
+</View>

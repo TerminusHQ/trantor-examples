@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View title="学生信息" forModel="example_dict_Student" type="Form" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Form model="example_dict_Student" dataCondition="id = ?" dataParams="[pageContext.record.id]">
+        <Fields>
+            <Field name="name"/>
+            <Field name="sex"/>
+        </Fields>
+        <Actions>
+            <Action type="Submit" show="#{!this.data.id}" logicFunction="example_dict_CreateStudentBuiltInFunc" after="GoBack" layout="Footer"/>
+            <Action type="Submit" show="#{!!this.data.id}" logicFunction="example_dict_UpdateStudentBuiltInFunc" after="GoBack" layout="Footer"/>
+        </Actions>
+    </Form>
+</View>

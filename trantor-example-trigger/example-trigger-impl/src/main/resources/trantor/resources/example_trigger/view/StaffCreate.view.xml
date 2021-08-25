@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<View menuView="true" type="Form" forModel="example_trigger_Staff" title="人员信息创建" version="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://trantor-docs-dev.app.terminus.io/static/v0.16.x/schema/base.xsd">
+    <Form model="example_trigger_Staff" onFieldValueChange="#{onFieldChange}">
+        <Fields>
+            <Field name="staffName" label="员工名称"/>
+            <Field name="staffMobile" label="员工手机号"/>
+            <Field name="StaffEmail" label="员工邮箱"/>
+            <GroupField singleColumn="true">
+                <Field name="staffDesc" label="个人介绍"/>
+            </GroupField>
+        </Fields>
+        <Actions>
+            <Action type="Submit" label="提交" after="GoBack" layout="Footer" logicFunction="example_trigger_CreateStaffFunc"/>
+        </Actions>
+    </Form>
+</View>

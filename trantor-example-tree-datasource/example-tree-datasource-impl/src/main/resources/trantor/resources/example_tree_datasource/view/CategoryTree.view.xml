@@ -1,0 +1,13 @@
+<View xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://terminus-trantor.oss-cn-hangzhou.aliyuncs.com/xsi/0.17.x/base.xsd"
+      title="树形容器" forModel="example_tree_datasource_Category" type="List" menuView="true" version="2">
+    <Tree model="example_tree_datasource_Category" parentField="parent"  searchable="true" hasChildrenField="hasChildren" dataSource="example_tree_datasource_Category_CategoryTreeDataProvider">
+        <Fields>
+            <Field name="name"/>
+        </Fields>
+        <RecordActions>
+            <Action label="编辑" targetView="example_tree_datasource_Category__Form__builtIn"/>
+            <Action label="删除" logicFunction="example_tree_datasource_DeleteCategoryBuiltInFunc" after="Refresh"/>
+        </RecordActions>
+    </Tree>
+</View>
